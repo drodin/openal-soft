@@ -1,0 +1,11 @@
+on:
+  push
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    - run: |
+        cmake . -B _builds
+        cmake --build _builds
